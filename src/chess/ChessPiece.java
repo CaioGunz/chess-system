@@ -1,5 +1,7 @@
 package chess;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.REUtil;
+
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
@@ -7,6 +9,7 @@ import boardgame.Position;
 public abstract class ChessPiece extends Piece {
 
 	private Color color;
+	private int moveCount;
 
 	public ChessPiece(Board board, Color color) {
 		super(board);
@@ -15,6 +18,18 @@ public abstract class ChessPiece extends Piece {
 	
 	public Color getColor() {
 		return color;
+	}
+	
+	public int getMoveCount() {
+		return moveCount;
+	}
+	
+	public void decreaseMoveCount() {
+		moveCount--;
+	}
+	
+	public void increaseMoveCount() {
+		moveCount++;
 	}
 	
 	public ChessPosition getChessPosition() {
