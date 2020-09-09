@@ -98,10 +98,12 @@ public class UI {
 		}
 		if (piece == null) {
 			System.out.print("-" + ANSI_RESET);
-		} else {
+		} 
+		else {
 			if (piece.getColor() == Color.WHITE) {
 				System.out.print(ANSI_WHITE + piece + ANSI_RESET);
-			} else {
+			} 
+			else {
 				System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
 			}
 		}
@@ -115,11 +117,10 @@ public class UI {
 		System.out.print("White: ");
 		System.out.print(ANSI_WHITE);
 		System.out.println(Arrays.toString(white.toArray()));
-		System.out.println(ANSI_RESET);
+		System.out.print(ANSI_RESET);
 		System.out.print("Black: ");
 		System.out.print(ANSI_YELLOW);
-		System.out.println(Arrays.toString(white.toArray()));
-		System.out.println(ANSI_RESET);
-		
+		System.out.println(Arrays.toString(black.toArray()));
+		System.out.print(ANSI_RESET);
 	}
 }
